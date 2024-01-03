@@ -2,7 +2,8 @@ import pyautogui
 import csv
 import time
 pyautogui.PAUSE = 0.01
-with open('FILENAME.csv') as file:
+filename = input('Input the filename (including extension, i.e. ".csv"): ')
+with open(filename) as file:
     time.sleep(10)
     csv_reader = csv.reader(file, delimiter=',')
     reader = csv.DictReader(file)
